@@ -1,6 +1,7 @@
 FROM php:7.3-apache
 
-ARG CAS_VERSION=1.3.8
+ENV CAS_VERSION=1.3.8
+ENV TZ=America/Santo_Domingo
 
 # Setup PHP for GLPI
 RUN apt-get update && \
