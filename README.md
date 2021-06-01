@@ -5,3 +5,13 @@
 ## About GLPI
 
 GLPI stands for **Gestionnaire Libre de Parc Informatique** is a Free Asset and IT Management Software package, that provides ITIL Service Desk features, licenses tracking and software auditing.
+
+## How to use it
+
+```BASH
+# Give execution permissios to the script
+chmod u+x ./setup.sh
+
+# Run it
+./setup.sh
+```
