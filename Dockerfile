@@ -1,4 +1,4 @@
-FROM php:7-apache
+FROM php:7.3-apache
 
 ARG CAS_VERSION=1.3.8
 
