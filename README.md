@@ -9,9 +9,9 @@ GLPI stands for **Gestionnaire Libre de Parc Informatique** is a Free Asset and 
 ## How to use it
 
 ```BASH
-# Give exec permissions to the script
-chmod u+x ./setup.sh
+# install from the command line
+docker pull ghcr.io/jeffreyart1/glpi:<tag>
 
-# Run it
-./setup.sh
+# run the image
+docker run -p 80:80 ghcr.io/jeffreyart1/glpi:<tag> --name glpi
 ```
