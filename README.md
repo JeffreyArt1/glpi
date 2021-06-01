@@ -15,3 +15,19 @@ docker pull ghcr.io/jeffreyart1/glpi:<tag>
 # run the image
 docker run -p 80:80 ghcr.io/jeffreyart1/glpi:<tag> --name glpi
 ```
+
+<!--
+```PHP
+## config_db.php
+<?php
+class DB extends DBmysql {
+   public $dbhost     = 'db host';
+   public $dbuser     = 'user';
+   public $dbpassword = 'pass';
+   public $dbdefault  = 'default db name';
+}
+```
+
+local_php:/var/www/html/config/config_db.php
+
+ -->
