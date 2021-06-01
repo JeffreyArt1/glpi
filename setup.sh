@@ -17,6 +17,6 @@ cd $CURRENT_DIR
 tar zxvf $FILENAME
 
 echo "Building Docker image"
-docker build ./$GLPI_DIR -t $GLPI_DIR:bnphu-$GLPI_VER --file Dockerfile
+docker build ./$GLPI_DIR -t $GLPI_DIR:bnphu-$GLPI_VER --file Dockerfile --no-cache
 
 echo "Completed! 🐳"
