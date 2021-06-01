@@ -9,7 +9,7 @@ GLPI stands for **Gestionnaire Libre de Parc Informatique** is a Free Asset and 
 ## How to use it
 
 ```BASH
-# Give execution permissios to the script
+# Give exec permissions to the script
 chmod u+x ./setup.sh
 
 # Run it
