@@ -1,4 +1,4 @@
-name: Docker
+name: Publish latest image at runtime
 
 on:
   push:
@@ -6,17 +6,12 @@ on:
       - master
 
 env:
-  IMAGE_NAME: glpi
-  API_URL: "https://api.github.com/repos/glpi-project/glpi/releases/latest"
+  API_URL: 'https://api.github.com/repos/glpi-project/glpi/releases/latest'
 
 jobs:
   push:
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
-
-    permissions:
-      contents: read
-      packages: write
 
     steps:
       - name: Checkout code
@@ -31,12 +26,9 @@ jobs:
 
       - name: Push image to GHCR
         run: |
-          IMAGE_ID=ghcr.io/${{ github.repository }}/$IMAGE_NAME
-
-          # Change all uppercase to lowercase
-          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-          
           VERSION=bnphu-$(curl -s $API_URL | grep tag_name | cut -d '"' -f 4)
+          IMAGE_NAME=glpi:$VERSION
+          IMAGE_ID=ghcr.io/${{ github.repository }}
 
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
